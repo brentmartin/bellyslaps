@@ -22,6 +22,13 @@ import Foundation
         var bugs = [Int]()
         var codes = [Int]()
         var deploy = [Int]()
+
+        // For guessing drinks later
+        var guessValue: Int = 0
+        var totalValue: Int = 0
+        var h = 0
+        var l = 0
+
         // To fill arrays with integers
         meetings = []
         meetingsCount = 3 + Int(arc4random() % 3)
