@@ -80,3 +80,23 @@ import Foundation
         } else {
             guessValue = totalValue
         }
+
+        // Prints the prompts for the user
+        print("Jason had \(meetingsCount) meetings today.", terminator: " ")
+        print("He reviewed \(reviewsCount) codes,", terminator: " ")
+        if bugsCount > 0 {
+            print("and found \(bugsCount) bugs in them.", terminator: " ")
+        } else {
+            print("and all the codes are bug-free!.", terminator: " ")
+        }
+        if codesCount > 0 {
+            print("Luckily, he got to write \(codesCount) codes today", terminator: " ")
+        } else {
+            print("Unfortunately, he got to write no codes today", terminator: " ")
+        }
+        print("- and we all know how much Jason loves the codes.", terminator: " ")
+        if deployCount == 1 {
+            print("Also, a big ole chunk of codes shipped today.")
+        }
+        print("So how many Scotches do you think Jason will have today?")
+
