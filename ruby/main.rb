@@ -60,3 +60,20 @@
 
   puts "Lets guess how many drinks Jason will be having?"
 
+  guess
+def guess
+  print "> "
+  g = gets.chomp
+  if g.to_i > @total_drinks
+    sleep 0.5
+    puts "Too many, try again."
+    guess
+  elsif g.to_i < @total_drinks
+    sleep 0.5
+    puts "Too little, try again."
+    guess
+  else
+    sleep 0.5
+    puts "Nailed it! Good job."
+  end
+end
