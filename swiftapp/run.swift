@@ -8,6 +8,7 @@
 
 import Foundation
 
+system("clear")
 
 var quitGame: Bool = false
 var firstGame: Bool = true
@@ -18,6 +19,7 @@ let weekdays: Array<String> = ["Monday", "Tuesday", "Wednesday", "Thursday", "Fr
 
 while quitGame == false {
     playCount += 1
+    print("\n\n")
 
     if firstGame == false {
         print("Tomorrow is yet another day! Should we check in on Jason again? (y) or (n) ")
@@ -32,6 +34,7 @@ while quitGame == false {
         if yourResponse == "y" {
 
 
+            system("clear")
 
             // Instantiating integers to randomize counts later
             var meetingsCount: Int = 0
@@ -137,6 +140,7 @@ while quitGame == false {
               print("\(weekdays[4]), Jason had \(drinkCount[4]) scotches, and it took you \(guessCount[4]) guesses.")
             }
 
+            print("\n\n")
             // Prints what day we're on
             print("Its \(weekdays[playCount])!", terminator: " ")
             if playCount >= 4 {
