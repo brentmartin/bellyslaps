@@ -8,6 +8,10 @@
 
 import Foundation
 
+print("It's happy hour! Should we check in on Jason and see if he would like a drink? (y) or (n) ")
+if var yourResponse = readLine() {
+    if yourResponse == "y" {
+
         // Instantiating integers to randomize counts later
         var meetingsCount: Int = 0
         var reviewsCount: Int = 0
@@ -166,3 +170,8 @@ import Foundation
             print("Jason will not have any Scotches today!")
         }
 
+
+    } else {
+        print("Cool, nvm then.")
+    }
+}
