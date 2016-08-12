@@ -100,3 +100,53 @@ import Foundation
         }
         print("So how many Scotches do you think Jason will have today?")
 
+        // Loop for guessing how many drinks
+        print("Take a guess?", terminator: " ")
+        while Int(yourResponse) != guessValue {
+            print("Enter a number to guess. ")
+            if var yourResponse = readLine() {
+
+                // Increases the missed guess count
+                if (Int(yourResponse) > guessValue) {
+                    h += 1
+                }
+                if (Int(yourResponse) < guessValue) {
+                    l += 1
+                }
+
+                // Guessing too high
+                if (Int(yourResponse) > guessValue) && (h == 1) {
+                    print("Nope, too much.")
+                    continue
+                }
+                if (Int(yourResponse) > guessValue) && (h == 2) {
+                    print("Does Jason look like an alcoholic to you? Less.")
+                    continue
+                }
+                if (Int(yourResponse) > guessValue) && (h >= 3) {
+                    print("Funny guy. Lower.")
+                    continue
+                }
+
+                // Guessing too low
+                if (Int(yourResponse) < guessValue) && (l == 1) {
+                    print("Definitely more than that.")
+                    continue
+                }
+                if (Int(yourResponse) < guessValue) && (l == 2) {
+                    print("More, Jason likes his Scotch remember?")
+                    continue
+                }
+                if (Int(yourResponse) < guessValue) && (l >= 3) {
+                    print("Little more...")
+                    continue
+                }
+
+                // Guessed right
+                if Int(yourResponse) == guessValue {
+                    print("You nailed it!")
+                    break
+                }
+            }
+        }
+
