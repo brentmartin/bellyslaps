@@ -15,3 +15,10 @@ import Foundation
         var codesCount: Int = 0
         var shippedChance: Int = 0
         var deployCount: Int = 0
+
+        // Creating arrays to push each into
+        var meetings = [Int]()
+        var reviews = [Int]()
+        var bugs = [Int]()
+        var codes = [Int]()
+        var deploy = [Int]()
