@@ -11,8 +11,13 @@ import Foundation
 
 var quitGame: Bool = false
 var firstGame: Bool = true
+var playCount: Int = -1
+var guessCount = [Int]()
+var drinkCount = [Int]()
+let weekdays: Array<String> = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 while quitGame == false {
+    playCount += 1
 
     if firstGame == false {
         print("Tomorrow is yet another day! Should we check in on Jason again? (y) or (n) ")
@@ -111,8 +116,33 @@ while quitGame == false {
 
 
 
+            // Prints previous results
+            if playCount >= 1 {
+              print("\(weekdays[0]), Jason had \(drinkCount[0]) scotches, and it took you \(guessCount[0]) guesses.")
+            }
 
+            if playCount >= 2 {
+              print("\(weekdays[1]), Jason had \(drinkCount[1]) scotches, and it took you \(guessCount[1]) guesses.")
+            }
 
+            if playCount >= 3 {
+              print("\(weekdays[2]), Jason had \(drinkCount[2]) scotches, and it took you \(guessCount[2]) guesses.")
+            }
+
+            if playCount >= 4 {
+              print("\(weekdays[3]), Jason had \(drinkCount[3]) scotches, and it took you \(guessCount[3]) guesses.")
+            }
+
+            if playCount >= 5 {
+              print("\(weekdays[4]), Jason had \(drinkCount[4]) scotches, and it took you \(guessCount[4]) guesses.")
+            }
+
+            // Prints what day we're on
+            print("Its \(weekdays[playCount])!", terminator: " ")
+            if playCount >= 4 {
+              print("But tomorrow is the WEEKEND, so this is the last game!", terminator: " ")
+              quitGame = false
+            }
             print("How's Jason doing?", terminator: "\n\n")
 
             // Prints the prompts for the user
@@ -140,6 +170,13 @@ while quitGame == false {
                 print("Enter a number to guess. ")
                 if var yourResponse = readLine() {
 
+                    // Increases the missed guess count
+                    if (Int(yourResponse) > drinkValue) {
+                        h += 1
+                    }
+                    if (Int(yourResponse) < drinkValue) {
+                        l += 1
+                    }
 
                     // Guessing too high
                     if (Int(yourResponse) > drinkValue) && (h == 1) {
