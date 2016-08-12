@@ -65,6 +65,24 @@ def drink
   guess
 end
 
+def end_day
+  puts "Shall we try it again tomorrow? (y)es or (n)o"
+  t = gets.chomp
+  if t.upcase == "Y"
+    sleep 0.5
+    jason
+  elsif t.upcase == "N"
+    sleep 0.5
+    puts "Good idea, lets end this madness!"
+    sleep 2
+  else
+    system('clear')
+    sleep 0.5
+    puts "I'm sorry, I didn't get that answer."
+    sleep 2
+    end_day
+  end
+end
 
 def guess
   print "> "
