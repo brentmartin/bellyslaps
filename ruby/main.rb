@@ -22,3 +22,10 @@
     scotch = rand(-1..1)
     @codes << scotch
   end
+
+  shipped = [0, 0, 0, 0, 1]
+  shipped.shuffle
+  if shipped.first == 1
+    scotch = rand(-4..4)
+    @deploy << scotch
+  end
