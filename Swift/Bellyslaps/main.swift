@@ -150,3 +150,12 @@ import Foundation
             }
         }
 
+
+        if totalValue < 0 {
+            print("Jason will celebrate with \(guessValue) Scotches today!")
+        } else if totalValue > 0 {
+            print("Jason will drown his sorrows with \(guessValue) Scotches today!")
+        } else {
+            print("Jason will not have any Scotches today!")
+        }
+
