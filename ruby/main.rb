@@ -34,3 +34,4 @@
   @b_drinks = @bugs.inject(0) {|sum, i|  sum + i }
   @c_drinks = @codes.inject(0) {|sum, i|  sum + i }
   @d_drinks = @deploy.inject(0) {|sum, i|  sum + i }
+  @total_drinks = @m_drinks + @r_drinks + @b_drinks + @c_drinks + @d_drinks
