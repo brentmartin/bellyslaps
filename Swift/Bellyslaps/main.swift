@@ -8,3 +8,10 @@
 
 import Foundation
 
+        // Instantiating integers to randomize counts later
+        var meetingsCount: Int = 0
+        var reviewsCount: Int = 0
+        var bugsCount: Int = 0
+        var codesCount: Int = 0
+        var shippedChance: Int = 0
+        var deployCount: Int = 0
