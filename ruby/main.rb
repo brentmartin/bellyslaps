@@ -38,29 +38,15 @@
   system('clear')
   print "Jason had #{@meetings.count} meetings today. "
   print "He had #{@reviews.count} code reviews, "
-
-  if @bugs.count > 0
-    print "and found #{@bugs.count} bugs. "
-  else
-    print "and found no bugs in the code base. "
-  end
-
-  if @codes.count > 0
-    print "He got to work on code #{@codes.count} times today. "
-  else
-    print "Unfortunately, he did not get to code any today. "
-  end
-
-  if @deploy.count > 0
-    print "Also, code was pushed to production today. "
-  end
-
+  @bugs.count > 0 ? (print "and found #{@bugs.count} bugs. ") : (print "and found no bugs in the code base. ")
+  @codes.count > 0 ? (print "He got to work on code #{@codes.count} times today. ") : (print "Unfortunately, he did not get to code any today. ")
+  print "Also, code was pushed to production today. " if @deploy.count > 0
   puts ""
   sleep 1
-
-  puts "Lets guess how many drinks Jason will be having?"
-
+  puts "Lets guess how many drinks Jason will be having!?"
   guess
+
+
 def guess
   print "> "
   g = gets.chomp
