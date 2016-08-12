@@ -35,3 +35,28 @@
   @c_drinks = @codes.inject(0) {|sum, i|  sum + i }
   @d_drinks = @deploy.inject(0) {|sum, i|  sum + i }
   @total_drinks = @m_drinks + @r_drinks + @b_drinks + @c_drinks + @d_drinks
+  system('clear')
+  print "Jason had #{@meetings.count} meetings today. "
+  print "He had #{@reviews.count} code reviews, "
+
+  if @bugs.count > 0
+    print "and found #{@bugs.count} bugs. "
+  else
+    print "and found no bugs in the code base. "
+  end
+
+  if @codes.count > 0
+    print "He got to work on code #{@codes.count} times today. "
+  else
+    print "Unfortunately, he did not get to code any today. "
+  end
+
+  if @deploy.count > 0
+    print "Also, code was pushed to production today. "
+  end
+
+  puts ""
+  sleep 1
+
+  puts "Lets guess how many drinks Jason will be having?"
+
