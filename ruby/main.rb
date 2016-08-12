@@ -29,3 +29,8 @@
     scotch = rand(-4..4)
     @deploy << scotch
   end
+  @m_drinks = @meetings.inject(0) {|sum, i|  sum + i }
+  @r_drinks = @reviews.inject(0) {|sum, i|  sum + i }
+  @b_drinks = @bugs.inject(0) {|sum, i|  sum + i }
+  @c_drinks = @codes.inject(0) {|sum, i|  sum + i }
+  @d_drinks = @deploy.inject(0) {|sum, i|  sum + i }
